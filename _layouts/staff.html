@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="card flex-md-row mb-4 shadow-sm h-md-250">
+    <div class="card-body d-flex flex-column align-items-start">
+        <div class="media">
+            <img class="align-self-start mr-3" src="{{ page.profileImage }}" alt="Generic placeholder image">
+            <div class="media-body">
+                <h2 class="mt-0">{{ page.name }}</h2>
+                <h3>{{ page.position }}</h3>
+                {{ content }}
+
+                <h2 style="margin-top: 40px">Posts by {{ page.nickname }}</h2>
+                <ul>
+                    {% assign filtered_posts = site.posts | where: 'author', page.key %}
+                    {% for post in filtered_posts %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

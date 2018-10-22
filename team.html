@@ -1,0 +1,18 @@
+---
+title: Our Team
+---
+<h1>Our Team</h1>
+
+{% for member in site.staff %}
+<div class="media">
+    <img class="align-self-start mr-3" src="{{ member.profileImage }}" alt="Generic placeholder image">
+    <div class="media-body">
+        <h2 class="mt-0"><a href="{{ member.url }}">{{ member.name }}</a></h2>
+        <h5>{{ member.position }}</h5>
+        <small><a href="mailto:{{member.email}}">{{ member.email }}</a></small>
+        {% if member.excerpt %}
+        <p>{{ member.excerpt }}</p>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}
