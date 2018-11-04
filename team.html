@@ -4,15 +4,16 @@ title: Our Team
 <h1>Our Team</h1>
 
 {% for member in site.staff %}
-<div class="media">
-    <img class="align-self-start mr-3" src="{{ member.profileImage }}" alt="Generic placeholder image">
-    <div class="media-body">
-        <h2 class="mt-0"><a href="{{ member.url }}">{{ member.name }}</a></h2>
-        <h5>{{ member.position }}</h5>
-        <small><a href="mailto:{{member.email}}">{{ member.email }}</a></small>
-        {% if member.excerpt %}
-        <p>{{ member.excerpt }}</p>
-        {% endif %}
+<div class="rounded teamMember">
+  <div class="row no-gutters justify-content-center text-center text-sm-left">
+    <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3 align-self-center pr-sm-3 pb-3 pb-sm-0">
+      <img class="rounded-circle img-fluid" src="{{ member.profileImage }}" alt="">
     </div>
+    <div class="col-6">
+      <div class="name"><a class="name" href="{{ member.url }}">{{ member.name }}</a></h5>
+      <p class="text-sans-serif">{{ member.position }}</p>
+      <a class="text-sans-serif fs--1 font-weight-black text-black" href="#">Follow @ twitter</a>
+    </div>
+  </div>
 </div>
 {% endfor %}

@@ -1,2 +1,26 @@
+.comingSoon {
+  text-align: center;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 64px;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: 700;
+  line-height: 96px; }
+
+.orange {
+  color: #ff8800; }
+
+.green {
+  color: #55b200; }
+
 .current {
   color: green; }
+
+.teamMember {
+  margin: 10px 0px;
+  padding: 10px;
+  background-color: #fafafa !important; }
+
+.teamMember a.name {
+  font-size: 24px;
+  color: #5b6d77; }
